@@ -11,13 +11,13 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
-Route::get('/index', [
+Route::get('/', [
 	'uses'		=>		'PageController@index'
 ]);
-Route::post('/index',[
+Route::post('/',[
 	'uses'		=>		'PageController@send'
 ]);
