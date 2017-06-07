@@ -1,0 +1,90 @@
+/* Reset */
+body,h1,h2,h3,h4,h5,h6,p,form,ul,li,ol,dt,dl,table,input,textarea,img{
+	margin:0px; padding:0px;
+}
+img{
+	border:0px; max-width:100%;
+}
+a{
+	text-decoration:none;  color:inherit;
+}
+/*End Reset*/
+body{
+	background:$bgcolor; font-family:$font;
+	color:$black;
+}
+header{
+	width:100%; overflow:hidden; border-bottom:1px solid #848484;
+	background:#343538; font-size:30px; margin-bottom:50px;
+	font-weight:300; color:#bfbfbf;
+}
+header a{
+	font-size:14px; float:right; margin-top:15px;
+}
+#holder{
+	width:350px; margin:0px auto 0px;
+}
+.form_container{
+	border-top:4px solid #343538;  @include box-shadow(0px,0px,3px,0, #cac9c9, false); padding:20px; background:#fff; 
+}
+.form_container form{
+	margin-bottom:20px;
+}
+.form_container h1{
+	color:#3a3a3a; font-size:30px; font-weight:300; 
+	text-align:center; margin-bottom:20px;
+}
+.form_container{
+	li{
+		margin-bottom:25px; list-style:none;
+		width:100%; display:inline-block;
+		span.err{
+			color:#dd1037; font-size:12px;
+			float:right;
+		}
+	}
+	input[type=text],input[type=email]{
+		border-width:0 0 1px 0; width:100%; border-color:#ececec;
+		padding:0px 0px 6px 3px;  background:none;
+	}
+	input.has-error{
+		border-bottom:1px solid #dd1037;
+	}
+	input[type=text].has-error:focus{
+		border-bottom:2px solid #dd1037; outline:none;
+	}
+	input[type=email]:focus,
+	input[type=text]:focus{
+		border-bottom:2px solid #1a1b1b; outline:none;
+	}
+	textarea{
+		resize:none; width: 100%; border-color:#ececec; min-height:100px;
+		padding:2px 0px 0px 3px; 
+	}
+	textarea:focus{
+		outline:none; border:2px solid #1a1b1b;
+	}
+	textarea.has-error{
+		border:1px solid #dd1037;
+	}
+	textarea.has-error:focus{
+		border:2px solid #dd1037;
+	}
+	input[type=submit]{
+		-moz-transition: all 0.3s ease 0s;
+	    -webkit-transition: all 0.3s ease 0s;
+	    transition: all 0.3s ease 0s ;
+	    background:#3a3a3a; color:#fff; border:0px; 
+	    padding:10px 20px; @include border-radius(4px);
+	    width:100%;
+		background: #474747; /* Old browsers */
+		background: -moz-linear-gradient(-45deg, #474747 0%, #383838 50%, #3a3a3a 51%, #3a3a3a 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(-45deg, #474747 0%,#383838 50%,#3a3a3a 51%,#3a3a3a 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(135deg, #474747 0%,#383838 50%,#3a3a3a 51%,#3a3a3a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#474747', endColorstr='#3a3a3a',GradientType=1 ); 
+	}
+	input[type=submit]:hover{
+		@include box-shadow(0px,0px,3px,0, #cac9c9, false);
+		background:#1B1B26;
+	}
+}
