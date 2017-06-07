@@ -22,7 +22,6 @@
 	<script src="//cdn.ckeditor.com/4.7.0/basic/ckeditor.js"></script>
 	<script type="text/javascript">
 		CKEDITOR.replace( 'editor1' );
-		CKEDITOR.config.removePlugins = 'About';
 	</script>
 	<script src="{{asset('js/effect.js')}}"></script>
 </body>
