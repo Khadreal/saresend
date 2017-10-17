@@ -11,7 +11,7 @@
 			    	Mail Sent
 			    </div>
 			@endif
-			<form method="post">
+			<form method="post" enctype='multipart/form-data'>
 				<li>
 					<input class="{{ $errors->has('recipient') ? 'has-error' : '' }}" type="text" placeholder="To e.g:example@yahoo.org" name="recipient" value="{{ old('recipient') }}" >
 					@if($errors->has('recipient'))
@@ -33,7 +33,11 @@
 				</li>
 
 				<li>
-					<textarea name="editor1" id="editor1" class="{{ $errors->has('message') ? 'has-error' : '' }}" name="message" placeholder="Your Message">{{ old('message') }}</textarea>
+					<input class="upload" type="file" placeholder="Upload" name="upload" >
+				</li>
+
+				<li>
+					<textarea name="message" id="message" class="{{ $errors->has('message') ? 'has-error' : '' }}" placeholder="Your Message">{{ old('message') }}</textarea>
 					@if($errors->has('message'))
 						<span class="err">{{ $errors->first('message') }}</span>
 					@endif
