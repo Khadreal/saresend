@@ -30,17 +30,17 @@ class PageController extends Controller
     public function send(Request $request)
     {	
 
-    	//$this->validate->sendEmailValidation($request);
+        //This is stopping the form froms sending
+    	$this->validate->sendEmailValidation($request);
 
         if ($request->hasFile('upload')) {
 
             
-           // foreach ($request['upload'] as $file) {
+        
             $image = $request->file('upload');
             $name = time().'.'.$image->getClientOriginalExtension();
             $destinationPath = public_path('/images');
             $image->move($destinationPath, $name);
-            //}
 
             $data = [
                 'subject'   =>     $request['subject'],
