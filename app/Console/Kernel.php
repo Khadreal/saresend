@@ -14,6 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         //
+        '\App\Console\Commands\DeleteInActiveMail',
     ];
 
     /**
@@ -26,6 +27,9 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+
+        $schedule->command('DeleteInActiveMail:deletemails')
+                 ->everyMinute();
     }
 
     /**
